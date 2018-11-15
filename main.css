@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("teamrocket.png");
+}
+
+.main_container {
+  margin: 0;
+  padding: 0;
+
+}
+
+#banner {
+  text-align: center;
+  background-color: red;
+  background: linear-gradient(to bottom, red 50%, gray 50%);
+  font-color: rebeccapurple;
+}
+
+#first_header {
+  color: indigo;
+  font-family: helvetica;
+}
+
+#forGround {
+  background-color: rgba(0,0,0,0.9);
+  width: 100%;
+  height:100vh;
+  position: relative;
+  margin:0;
+}
