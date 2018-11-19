@@ -26,9 +26,36 @@ body {
 }
 
 #forGround {
-  background-color: rgba(0,0,0,0.9);
-  width: 100%;
+  left: 150px;
+  right: 100px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+  width: 950px;
   height:100vh;
-  position: relative;
+  position: absolute;
   margin:0;
+}
+
+#boxLeft {
+  width: 475px;
+  height: 75vh;
+  border-style: solid;
+  border-color: red;
+  padding: 10px;
+  border-width: 10px;
+
+
+}
+
+
+
+#imgPlaceHolder {
+  width: 300px;
+  height: 200px;
+  border-style: solid;
+  border-color: purple;
+}
+
+h3 {
+
 }
