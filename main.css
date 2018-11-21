@@ -16,7 +16,6 @@ p {
 .main_container {
   margin: 0;
   padding: 0;
-
 }
 
 #banner {
@@ -44,7 +43,7 @@ p {
 
 #boxLeft {
   width: 475px;
-  height: 80vh;
+  height: 78vh;
   border-style: solid;
   border-color: red;
   padding: 20px;
@@ -55,12 +54,13 @@ p {
 }
 
 #trainerpic {
-  position: fixed;
+  position: absolute;
   width: 100px;
   display: inline-block;
   text-align: center;
-  right: 675px;
+  right: 350px;
   padding: 40px;
+  margin-top: 225px;
   background-color: black;
   background-blend-mode: lighten;
   opacity: 0.5;
@@ -72,16 +72,17 @@ p {
   height: 80vh;
   float: right;
   border-style: solid;
-  border-color: gray;
+  border-color: indigo;
   border-width: 10px;
   padding: 10px;
 }
 
 #badges {
-  width: 400px;
+  width: 300px;
   background-color: darkgray;
   background-blend-mode: darken;
-  opacity: 0.6;
+  opacity: 0.7;
+  margin-left: 100px;
 }
 
 #ball1 {
@@ -127,11 +128,21 @@ p {
 
 footer {
   text-align: center;
+  position: absolute;
+  width: 100px;
 }
 
 a {
-  background-color: dimgray;
   padding: 10px;
+  background-color: dimgray;
   font-family:  helvetica;
   font-weight: bold;
 }
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    background color: dimgray;
+  }

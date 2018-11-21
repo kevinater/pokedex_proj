@@ -7,39 +7,40 @@ class Pokemon {
     this.defense = defense;
     this.ability = ability;
     this.container = document.querySelector('#pokeStats');
-    this.element = document.createElement("div");
+    this.element = document.getElementById("test");
     this.element.className = 'poke_products';
   }
 
 
 display () {
 
+
   let pokeImage = document.getElementById('imgPlaceHolder');
   pokeImage.src = this.pokeImage;
   this.element.appendChild(pokeImage);
   this.container.appendChild(this.element);
 
-  let name = document.createElement('h2');
+  let name = document.querySelector('ol');
   name.innerHTML = "Name: " + this.name;
   this.element.appendChild(name);
   this.container.appendChild(this.element);
 
-  let hp = document.createElement('h3');
+  let hp = document.querySelector('ol');
   hp.innerHTML = "HP: " + this.hp;
   this.element.appendChild(hp);
   this.container.appendChild(this.element);
 
-  let attack = document.createElement('h3');
+  let attack = document.querySelector('ol');
   attack.innerHTML = "Attack: " + this.attack;
   this.element.appendChild(attack);
   this.container.appendChild(this.element);
 
-  let defense = document.createElement('h3');
+  let defense = document.querySelector('ol');
   defense.innerHTML = "Defense: " + this.defense;
   this.element.appendChild(defense);
   this.container.appendChild(this.element);
 
-  let ability = document.createElement('h3');
+  let ability = document.querySelector('ol');
   ability.innerHTML = "Ability: " + this.ability;
   this.element.appendChild(ability);
   this.container.appendChild(this.element);
@@ -56,6 +57,10 @@ class Trainer {
     return this.pokemon
   }
 
+  add (data) {
+    this.pokemon.push(data);
+  }
+
   get (name) {
     for (let i = 0; i < this.pokemon.length; i++) {
       if (name === this.pokemon.length[i].name) {
@@ -63,11 +68,12 @@ class Trainer {
       }
     }
   }
-
-
-
-
 }
+let kevin = new Trainer();
+
+
+
+
 
 function meowth(){
 axios.get("http://fizal.me/pokeapi/api/v2/name/meowth.json")
@@ -88,6 +94,7 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/meowth.json")
     meowth = new Pokemon(meowth_img, meowth_name, meowth_hp, meowth_attack, meowth_defense, meowth_ability,);
     meowth.display();
 
+    kevin.add(meowth);
   })
 }
 
@@ -113,6 +120,7 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/wobbuffet.json")
     wobbuffet = new Pokemon(wobb_image, wobb_name, wobb_hp, wobb_attack, wobb_defense, wobb_ability);
     wobbuffet.display();
 
+    kevin.add(wobbuffet);
 
   })
 }
@@ -126,14 +134,7 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/arbok.json")
     let arbok_attack = response.data.stats[4].base_stat;
     let arbok_defense = response.data.stats[3].base_stat;
 
-<<<<<<< HEAD
-    let arbok_ability = response.data.abilities[0].ability;
-    for (let i = 0; i < response.data.abilities[i].ability.length; i++) {
-      let result = response.data.abilities[i].ability.name;
-    }
 
-    arbok = new Pokemon(arbok_hp, arbok_attack, arbok_defense, arbok_ability);
-=======
     let arbok_ability = response.data.abilities[0].ability.name;
     for (let i = 0; i < response.data.abilities[i].ability.length; i++) {
       let result = response.data.abilities[i].ability.name;
@@ -141,8 +142,7 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/arbok.json")
     arbok = new Pokemon(arbok_image, arbok_name, arbok_hp, arbok_attack, arbok_defense, arbok_ability);
     arbok.display();
 
-
->>>>>>> 442ac89d7a93fa4fdcbfc1aebacd9f90eced4027
+    kevin.add(arbok);
 
   })
 }
