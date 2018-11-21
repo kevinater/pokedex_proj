@@ -7,6 +7,12 @@ body {
   background-image: url("teamrocket.png");
 }
 
+p {
+  color: white;
+  position: fixed;
+
+}
+
 .main_container {
   margin: 0;
   padding: 0;
@@ -17,7 +23,7 @@ body {
   text-align: center;
   background-color: red;
   background: linear-gradient(to bottom, red 50%, gray 50%);
-  font-color: rebeccapurple;
+  color: rebeccapurple;
 }
 
 #first_header {
@@ -25,12 +31,12 @@ body {
   font-family: helvetica;
 }
 
-#forGround {
+.forGround {
   left: 150px;
   right: 100px;
   text-align: center;
   background-color: rgba(0,0,0,0.5);
-  width: 950px;
+  width: 85%;
   height:100vh;
   position: absolute;
   margin:0;
@@ -38,13 +44,69 @@ body {
 
 #boxLeft {
   width: 475px;
-  height: 75vh;
+  height: 80vh;
   border-style: solid;
   border-color: red;
-  padding: 10px;
+  padding: 20px;
   border-width: 10px;
+  position: relative;
 
 
+}
+
+#trainerpic {
+  position: fixed;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  right: 675px;
+  padding: 40px;
+  background-color: black;
+  background-blend-mode: lighten;
+  opacity: 0.5;
+}
+
+
+#boxRight {
+  width: 475px;
+  height: 80vh;
+  float: right;
+  border-style: solid;
+  border-color: gray;
+  border-width: 10px;
+  padding: 10px;
+}
+
+#badges {
+  width: 400px;
+  background-color: darkgray;
+  background-blend-mode: darken;
+  opacity: 0.6;
+}
+
+#ball1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-right: 55px;
+  opacity: 0.7;
+}
+
+#ball2 {
+
+  width: 100px;
+  height: 100px;
+  margin-right: 55px;
+  opacity: 0.7;
+
+}
+
+#ball3 {
+
+  width: 100px;
+  height: 100px;
+  margin-right: 55px;
+  opacity: 0.5;
 }
 
 
@@ -56,6 +118,20 @@ body {
   border-color: purple;
 }
 
-h3 {
 
+
+#trainerinfo {
+  color: white;
+  font-size: 30px;
+}
+
+footer {
+  text-align: center;
+}
+
+a {
+  background-color: dimgray;
+  padding: 10px;
+  font-family:  helvetica;
+  font-weight: bold;
 }
