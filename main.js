@@ -76,7 +76,7 @@ let kevin = new Trainer();
 
 
 function meowth(){
-axios.get("http://fizal.me/pokeapi/api/v2/name/meowth.json")
+axios.get("https://fizal.me/pokeapi/api/v2/name/meowth.json")
   .then(function(response) {
     let meowth_img = "meowthstrum.gif";
     let meowth_name = "Meowth";
@@ -102,7 +102,7 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/meowth.json")
 
 
 function wobbuffet(){
-axios.get("http://fizal.me/pokeapi/api/v2/name/wobbuffet.json")
+axios.get("https://fizal.me/pokeapi/api/v2/name/wobbuffet.json")
   .then(function(response) {
     let wobb_image = "wobbuffetfood.gif";
     let wobb_name = "Wobbuffet";
@@ -126,7 +126,7 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/wobbuffet.json")
 }
 
 function arbok(){
-axios.get("http://fizal.me/pokeapi/api/v2/name/arbok.json")
+axios.get("https://fizal.me/pokeapi/api/v2/name/arbok.json")
   .then(function(response) {
     let arbok_image = "arbokhiss.gif";
     let arbok_name = "Arbok";
