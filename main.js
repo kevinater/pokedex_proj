@@ -40,15 +40,36 @@ display () {
   this.container.appendChild(this.element);
 
   let ability = document.createElement('h3');
-  ability.innerHTML = "Abilities: " + this.ability;
+  ability.innerHTML = "Ability: " + this.ability;
   this.element.appendChild(ability);
   this.container.appendChild(this.element);
 
 }
 }
 
+class Trainer {
+  constructor(pokemon) {
+    this.pokemon = [];
+  }
 
-let meowth;
+  all () {
+    return this.pokemon
+  }
+
+  get (name) {
+    for (let i = 0; i < this.pokemon.length; i++) {
+      if (name === this.pokemon.length[i].name) {
+        return this.pokemon[i];
+      }
+    }
+  }
+
+
+
+
+}
+
+function meowth(){
 axios.get("http://fizal.me/pokeapi/api/v2/name/meowth.json")
   .then(function(response) {
     let meowth_img = "meowthstrum.gif";
@@ -61,7 +82,6 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/meowth.json")
     console.log(meowth_ability);
     for (let i = 0; i < response.data.abilities[i].ability.length; i++) {
       let result = response.data.abilities[i].ability.name;
-      console.log ("Abilities: ", result);
     }
 
 
@@ -69,10 +89,12 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/meowth.json")
     meowth.display();
 
   })
+}
 
 
 
-let wobbuffet;
+
+function wobbuffet(){
 axios.get("http://fizal.me/pokeapi/api/v2/name/wobbuffet.json")
   .then(function(response) {
     let wobb_image = "wobbuffetfood.gif";
@@ -93,19 +115,45 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/wobbuffet.json")
 
 
   })
+}
 
-let arbok;
+function arbok(){
 axios.get("http://fizal.me/pokeapi/api/v2/name/arbok.json")
   .then(function(response) {
+    let arbok_image = "arbokhiss.gif";
+    let arbok_name = "Arbok";
     let arbok_hp = response.data.stats[5].base_stat;
     let arbok_attack = response.data.stats[4].base_stat;
     let arbok_defense = response.data.stats[3].base_stat;
 
+<<<<<<< HEAD
     let arbok_ability = response.data.abilities[0].ability;
     for (let i = 0; i < response.data.abilities[i].ability.length; i++) {
       let result = response.data.abilities[i].ability.name;
     }
 
     arbok = new Pokemon(arbok_hp, arbok_attack, arbok_defense, arbok_ability);
+=======
+    let arbok_ability = response.data.abilities[0].ability.name;
+    for (let i = 0; i < response.data.abilities[i].ability.length; i++) {
+      let result = response.data.abilities[i].ability.name;
+    }
+    arbok = new Pokemon(arbok_image, arbok_name, arbok_hp, arbok_attack, arbok_defense, arbok_ability);
+    arbok.display();
+
+
+>>>>>>> 442ac89d7a93fa4fdcbfc1aebacd9f90eced4027
 
   })
+}
+
+
+  // Added Event Listeners for each ball icon
+  let meowth_hover = document.getElementById('ball1');
+  meowth_hover.addEventListener('mouseover', meowth);
+
+  let wobbuffet_hover = document.getElementById('ball2');
+  wobbuffet_hover.addEventListener('mouseover', wobbuffet);
+
+  let arbok_hover = document.getElementById('ball3');
+  arbok_hover.addEventListener('mouseover', arbok);
