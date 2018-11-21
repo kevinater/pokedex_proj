@@ -100,7 +100,12 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/arbok.json")
     let arbok_hp = response.data.stats[5].base_stat;
     let arbok_attack = response.data.stats[4].base_stat;
     let arbok_defense = response.data.stats[3].base_stat;
+
     let arbok_ability = response.data.abilities[0].ability;
+    for (let i = 0; i < response.data.abilities[i].ability.length; i++) {
+      let result = response.data.abilities[i].ability.name;
+    }
+
     arbok = new Pokemon(arbok_hp, arbok_attack, arbok_defense, arbok_ability);
 
   })
